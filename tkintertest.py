@@ -36,7 +36,7 @@ for child in mainframe.winfo_children(): #run through all mainframe subclass and
     child.grid_configure(padx=5, pady=5)
 
 address_entry.focus() # pointer on the address entry frame when starting
-root.bind("<Return>", get_lati_longi)
+root.bind("<Return>", get_lati_longi) # return = enter
 
 
 root.mainloop()
