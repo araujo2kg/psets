@@ -35,7 +35,7 @@ ttk.Label(mainframe, text="Lat n Lon: ").grid(column=1, row=2, sticky=W)
 for child in mainframe.winfo_children(): #run through all mainframe subclass and apply padding
     child.grid_configure(padx=5, pady=5)
 
-address_entry.focus()
+address_entry.focus() # pointer on the address entry frame when starting
 root.bind("<Return>", get_lati_longi)
 
 
