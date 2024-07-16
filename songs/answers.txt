@@ -1,0 +1,18 @@
+By averaging some of the provided data such as danceability, energy, valence, etc., we can gauge the types of
+songs this person listens to most frequently, utilizing the provided data and considering that these measures
+range from 0.0 to 1.0:
+
+    An average danceability of 0.71 indicates that this person enjoys songs that are relatively suitable for dancing,
+based on a combination of musical elements.
+    An average energy of 0.65 represents a perceptual measure of intensity and activity, slightly above average. When
+combined with the danceability scores, it may suggest that this person prefers songs with some energy and danceability.
+    However, when considering the valence average of 0.48, which describes the musical positivity conveyed by a track,
+it may indicate that this person doesn't have a preference for either happy or sad songs, but rather enjoys songs that
+are a little energetic and rhythmic.
+    A close proximity aura would be a Purple one; this aura color pairs well with passionate music listeners. Purple auras
+tune in to get amped up, entertained, and moving as they navigate the twists and turns of their day.
+The data provided by just the top 100 songs from someone is not sufficient to accurately measure their aura,
+especially in a field as broad as music, where song interpretation varies for everyone. Enjoying songs with a low
+valence level, which could indicate a sad song, does not necessarily mean that the listener finds them truly sad.
+    To obtain a more accurate measure of the listener, more data about the songs they listen to, and a questionnaire that
+explores how they respond to these songs or types thereof, would be necessary.

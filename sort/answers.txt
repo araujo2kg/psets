@@ -1,0 +1,14 @@
+sort1 uses: Bubble sort
+
+How do you know?: It outperforms both algorithms in it's best case omega(n), when the data is
+already sorted.
+
+sort2 uses: Merge sort
+
+How do you know?: It has the best run times consistently, coinciding with it's theta(n log n) notation. And has
+a consistent run time regardless of the organization of the data, which coincides with its metodology.
+
+sort3 uses: Selection sort
+
+How do you know?: It has a consistent run time across all datas, which coincides with its big O(n2) and omege(n2) notations.
+It too performs the worst in the sorted data, as expected of selection sort.

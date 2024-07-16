@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Deposit
+{% endblock %}
+
+{% block main %}
+{% if cash %}
+<p class="fw-light">Account total: {{ cash | usd }}</p>
+{% endif %}
+<form action="/deposit" method="post">
+    <input name="value" type="number" class="form-control mx-auto w-25 mb-2" placeholder="Amount" autofocus>
+    <select name="method" class="form-select w-25 mx-auto mb-2">
+        <option disabled selected>Method</option>
+        {% for method in methods %}
+        <option value="{{ method }}">{{ method | capitalize }}</option>
+        {% endfor %}
+        <option disabled value="paypal">PayPal</option>
+    </select>
+    <div id="card"></div>
+    <button type="submit" class="btn btn-primary">Deposit</button>
+</form>
+<script type="text/javascript">
+
+    // Insert new input when correct method is selected
+    document.querySelector('select[name="method"]').addEventListener('change', function(event){
+        if (["visa", "amex", "mastercard"].includes(event.target.value)){
+            let new_input = document.createElement("input");
+            new_input.setAttribute("name", "card");
+            new_input.setAttribute("type", "number");
+            new_input.setAttribute("class", "form-control mx-auto w-25 mb-3");
+            new_input.setAttribute("placeholder", "Card number");
+            document.getElementById('card').innerHTML = '';
+            document.getElementById('card').appendChild(new_input);
+        } else {
+            document.getElementById('card').innerHTML = '';
+        }
+    });
+
+</script>
+{% endblock %}

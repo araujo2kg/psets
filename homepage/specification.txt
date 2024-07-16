@@ -1,0 +1,12 @@
+HTMl: <link>, <script>, <meta>, <header>, <nav>, <div>, <a>, <button>,
+<span>, <ul>, <li>, <main>, <h1>, <h2>, <section>, <img>, <h3>, <p>,
+<footer>, <i>.
+
+CSS: font-family, padding, margin, width, height, font-size, background-color,
+text-align, color, text-shadow, display, border, text-decoration, align-items.
+
+I used bootstrap to organize the pages, mainly using classes from the grid category,
+like rows and cols, and to create the interactive navigation bar. Javascript
+was used to dinamically insert the navbar and footer in all of the pages, to
+highlight the user page in the navbar, dinamically changing the css properties,
+to insert a dinamic google maps window on a page and to create an instagram feed style gallery.

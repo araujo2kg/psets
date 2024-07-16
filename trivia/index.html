@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            // Runs when page finishes loading
+           document.addEventListener('DOMContentLoaded', function(){
+           // MCQ Operations
+            document.querySelector("#mcq").addEventListener('click', function(event){
+                let mcq_answer = "Blue Whale"
+                // Reset the buttons to the default style
+                let buttons = document.querySelectorAll("#mcq button");
+                for (let i = 0; i < buttons.length; i++){
+                    buttons[i].style.backgroundColor = '#d9edff';
+                };
+                // Check for answer and give result
+                if (event.target.tagName == "BUTTON"){
+                let usr_answer = event.target.innerHTML;
+                if (usr_answer == mcq_answer){
+                    event.target.style.backgroundColor = '#66FF99';
+                    document.querySelector("#mcq_result").innerHTML = "Correct!";
+                }
+                else {
+                    event.target.style.backgroundColor = 'red';
+                    document.querySelector("#mcq_result").innerHTML = "Incorrect";
+                };};
+            });
+            // Free Answer Operations
+            let free_answer = "cheetah"
+            document.querySelector("#free_button").addEventListener('click', function(){
+                usr_answer = document.querySelector("#free_answer").value.toLowerCase();
+                if (usr_answer == free_answer){
+                    document.querySelector("#free_result").innerHTML = "Correct!";
+                    document.querySelector("#free_answer").style.backgroundColor = '#66FF99';
+                }
+                else {
+                    document.querySelector("#free_result").innerHTML = "Incorrect";
+                    document.querySelector("#free_answer").style.backgroundColor = 'red';
+                }
+            });
+           });
+
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <h3>Which of these animals is the largest mammal in the world?</h3>
+                <div id="mcq">
+                    <button>African Elephant</button>
+                    <button>Blue Whale</button>
+                    <button>Giraffe</button>
+                    <button>Hippopotamus</button>
+                    <button>Rhinoceros</button>
+                </div>
+                <div id="mcq_result" class="result_txt"><br></div>
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <h3>What is the fastest land animal?</h3>
+                <div>
+                    <input type="text" id="free_answer">
+                    <button id="free_button">Check Answer</button>
+                </div>
+                <div id="free_result" class="result_txt"><br></div>
+            </div>
+        </div>
+    </body>
+</html>
